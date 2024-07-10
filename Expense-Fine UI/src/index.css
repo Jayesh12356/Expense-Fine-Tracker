@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.component-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #0056b3, #007bff);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.data-container {
+  text-align: left;
+  padding: 20px;
+  width: 60%; /* Default width for data container */
+  max-width: 100%;
+}
+
+.data-container.wide {
+  width: 80%; /* Increase width for user details and expenses */
+}
+
+.user-details,
+.expenses-details {
+  display: none;
+}
+
+.user-details.show {
+  display: block;
+  width: 600px; /* Increase width to accommodate single-line data */
+}
+
+.expenses-details.show {
+  display: block;
+  overflow-x: auto;
+  max-height: 400px; /* Adjust height as needed */
+  overflow-y: scroll;
+}
+
+.data-container p {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Fixed table layout */
+}
+
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+}
+
+th {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+td {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.user-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.user-details-table th,
+.user-details-table td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  text-align: left;
+}
+
+.user-details-table th {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.user-details-table td {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.user-details-table th:first-child,
+.user-details-table td:first-child {
+  width: 30%; /* Set first column to 30% */
+}
+
+.user-details-table th:nth-child(2),
+.user-details-table td:nth-child(2) {
+  width: 70%; /* Set second column to 70% */
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 1.6rem;
+
+  color: var(--color-medium);
+  font-size: 1.4rem;
+}
+
+/* CREDIT: https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+.loader {
+  width: 50px;
+  height: 24px;
+  background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%
+      50%,
+    radial-gradient(circle closest-side, currentColor 90%, #0000) 50% 50%,
+    radial-gradient(circle closest-side, currentColor 90%, #0000) 100% 50%;
+  background-size: calc(100% / 3) 12px;
+  background-repeat: no-repeat;
+  animation: loader 1s infinite linear;
+}
