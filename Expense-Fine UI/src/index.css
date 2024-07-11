@@ -173,3 +173,38 @@ td {
   background-repeat: no-repeat;
   animation: loader 1s infinite linear;
 }
+
+.select-month-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.select-month-container span {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.select-month-container select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  appearance: none; /* Remove default arrow */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTQgOCIgd2lkdGg9IjE0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik02IDBsNiA2SDZ6bTAtN0wwIDhoMTB6bTAgMGwtNiA2ek02IDlsLTYtNmg2eiIvPjwvc3ZnPg=="); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  width: 200px;
+}
+
+.select-month-container select option {
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px;
+}
