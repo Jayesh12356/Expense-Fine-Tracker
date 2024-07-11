@@ -205,7 +205,7 @@ function App() {
         </div>
       )}
 
-      {!isLoading && !isError && (
+      {!isLoading && (
         <div className="component-container">
           <div className="select-month-container">
             <span>Select Month</span>
