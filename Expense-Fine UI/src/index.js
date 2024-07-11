@@ -10,7 +10,7 @@ function App() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [month, setMonth] = useState("");
+  const [month, setMonth] = useState(1);
 
   function handleShowUserDetails() {
     setShowUserDetails(!showUserDetails);
@@ -240,7 +240,7 @@ function App() {
           showUserDetails || showExpenses || showMonthlyFines ? "wide" : ""
         }`}
       >
-        {showUserDetails && data && (
+        {showUserDetails && data && !isError && !isLoading && (
           <div className="user-details show">
             <h2>User Details</h2>
             <table className="user-details-table">
@@ -272,7 +272,7 @@ function App() {
           </div>
         )}
 
-        {showExpenses && data && (
+        {showExpenses && data && !isError && !isLoading && (
           <>
             <h2>Expenses:</h2>
             <div className="expenses-details show">
@@ -302,7 +302,7 @@ function App() {
           </>
         )}
 
-        {showMonthlyFines && data && (
+        {showMonthlyFines && data && !isError && !isLoading && (
           <>
             <h2>Monthly Fines:</h2>
             <div className="monthly-fines-details show">
